@@ -1,0 +1,41 @@
+
+
+<div [hidden]="submitted" class="container">
+
+  <h3 class="red-text text-accent-4">Atualizar Filme: <span class="green-text text-darken-4">{{filme.titulo}}</span></h3>
+
+  <div class="z-depth-4">
+    <form (ngSubmit)="onSubmit()" class="col s12 quadrado" >
+      <div class="row">
+        <div class=" col s12">
+          <label for="titulo">Titulo do Filme</label>
+          <input  id="titulo" type="text" class="validate" required [(ngModel)]="filme.titulo" name="titulo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <label for="genero">Gênero do Filme</label>
+          <input  id="genero" type="text" class="validate" required [(ngModel)]="filme.genero" name="genero">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s8">
+          <label for="duracao">Duração do Filme</label>
+          <input  id="duracao" type="text" class="validate" required [(ngModel)]="filme.duracao" name="duracao">
+        </div>
+        <div class="col s4">
+          <label for="classificacao">Classificação do Filme</label>
+          <input  id="classificacao" type="text" class="validate" required [(ngModel)]="filme.classificacao" name="classificacao">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+        <i class="material-icons">save</i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4 class="green darken-4">Dados Registrados Corretamente!</h4>
+</div>

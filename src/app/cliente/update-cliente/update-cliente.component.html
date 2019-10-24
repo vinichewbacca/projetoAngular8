@@ -1,0 +1,54 @@
+
+
+<div [hidden]="submitted" class="container">
+
+  <h3 class="red-text text-accent-4">Atualizar Cliente: <span class="green-text text-darken-4">{{cliente.nome}}</span></h3>
+  <div class="z-depth-4">
+    <form (ngSubmit)="onSubmit()" class="col s12 quadrado" >
+      <div class="row">
+        <div class=" col s12">
+          <label for="nomeCliente">Nome</label>
+          <input  id="nomeCliente" type="text" class="validate" required [(ngModel)]="cliente.nome" name="nomeCliente">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s6">
+          <label for="cpf">CPF</label>
+          <input  id="cpf" type="text" class="validate" placeholder="Somente números" required [(ngModel)]="cliente.cpf" name="cpf">
+        </div>
+        <div class="col s6">
+          <label for="rg">RG</label>
+          <input  id="rg" type="text" class="validate" required [(ngModel)]="cliente.rg" name="rg">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s5">
+          <label for="email">Email</label>
+          <input  id="email" type="email" class="validate" required [(ngModel)]="cliente.email" name="email">
+        </div>
+        <div class="col s4">
+          <label for="fone">Telefone</label>
+          <input  id="fone" type="text" class="validate" required [(ngModel)]="cliente.telefone" name="fone">
+        </div>
+        <div class="col s3">
+          <p class="blue-text text-lighten-4">Tipo Cliente</p>
+          <input name="tipoCliente" type="radio" id="premium" required [(ngModel)]="cliente.tipoCliente" value="Premium"/>
+          <label for="premium">Premium</label>
+
+          <input name="tipoCliente" type="radio" id="comum" required [(ngModel)]="cliente.tipoCliente" value="Comum"/>
+          <label for="comum">Comum</label>
+        </div>
+      </div>
+      <button type="submit" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+        <i class="material-icons">save</i>
+      </button> &nbsp;&nbsp;
+      <button routerLink="" class="btn-floating waves-effect waves-light btn red ">
+        <i class="material-icons">cancel</i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4 class="green darken-4">Dados Registrados Corretamente!</h4>
+</div>

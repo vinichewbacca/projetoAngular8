@@ -1,0 +1,55 @@
+
+
+<div [hidden]="submitted" class="container">
+
+  <h3 class="red-text text-accent-4">Cadastrar Funcionario</h3>
+  <div class="z-depth-4">
+    <form (ngSubmit)="onSubmit()" class="col s12 quadrado" >
+      <div class="row">
+        <div class=" col s12">
+          <label for="nomeCliente">Nome</label>
+          <input  id="nomeCliente" type="text" class="validate" required [(ngModel)]="func.nome" name="nomeCliente">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <label for="cpf">CPF</label>
+          <input  id="cpf" type="text" class="validate" placeholder="Somente números" required [(ngModel)]="func.cpf" name="cpf">
+        </div>
+        <div class="col s4">
+          <label for="rg">RG</label>
+          <input  id="rg" type="text" class="validate" required [(ngModel)]="func.rg" name="rg">
+        </div>
+        <div class="col s4">
+          <label for="fone">Telefone</label>
+          <input  id="fone" type="text" class="validate" required [(ngModel)]="func.telefone" name="fone">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s4">
+          <label for="dtAdmissao">Data da Admissão</label>
+          <input  id="dtAdmissao" type="date" class="validate" required [(ngModel)]="func.dataAdimissao" name="dtAdmissao">
+        </div>
+        <div class="col s4">
+          <label for="salario">Salario</label>
+          <input  id="salario" type="text" class="validate" placeholder="R$ 00.00" required [(ngModel)]="func.salario" name="salario">
+        </div>
+        <div class="col s4">
+          <label for="funcao">Função</label>
+          <input  id="funcao" type="text" class="validate" required [(ngModel)]="func.funcao" name="funcao">
+        </div>
+      </div>
+      <button type="submit" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+        <i class="material-icons">save</i>
+      </button> &nbsp;&nbsp;
+      <button routerLink="" class="btn-floating waves-effect waves-light btn red ">
+        <i class="material-icons">cancel</i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4 class="green darken-4">Dados Registrados Corretamente!</h4>
+</div>
+

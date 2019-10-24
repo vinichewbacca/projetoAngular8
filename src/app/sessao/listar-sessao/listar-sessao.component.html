@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+  <div class="container">
+    <h3 class="red-text text-accent-4">Lista de Sessões</h3>
+  </div>
+  <div class="container">
+
+    <table class="centered z-depth-4">
+      <thead>
+      <tr>
+        <th>Nº</th>
+        <th>Horario</th>
+        <th>Filme</th><!--Aparecer o nome do filme teste mais tarde-->
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of sessoes | async">
+        <td>{{s.idSessao}}</td>
+        <td>{{s.horario}}</td>
+        <td>{{s.idFilme.titulo}}</td>
+        <td>
+          <button (click)="deletaSessao(s.idSessao)" class="btn-floating waves-effect waves-light btn red lighten-1 ">
+            <i class="material-icons">delete</i>
+          </button>
+          &nbsp; &nbsp;
+          <button  (click)="atualizaSessao(s.idSessao)" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+            <i class="material-icons">edit</i>
+          </button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

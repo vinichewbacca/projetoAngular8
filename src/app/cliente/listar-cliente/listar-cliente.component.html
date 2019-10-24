@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+  <div class="container">
+    <h3 class="red-text text-accent-4">Lista de Clientes</h3>
+  </div>
+  <div class="container">
+
+    <table class="centered z-depth-4">
+      <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>Cliente</th>
+        <th>Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cliente of clientes | async">
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.cpf}}</td>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.tipoCliente}}</td>
+        <td>
+          <button (click)="delCliente(cliente.idPessoa)" class="btn-floating waves-effect waves-light btn red lighten-1 ">
+            <i class="material-icons">delete</i>
+          </button>
+          &nbsp; &nbsp;
+          <button  (click)="atualizaCliente(cliente.idPessoa)" class="btn-floating waves-effect waves-light btn blue lighten-1 ">
+            <i class="material-icons">edit</i>
+          </button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

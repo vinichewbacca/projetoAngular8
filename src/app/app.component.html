@@ -1,21 +1,69 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+  <nav class="red accent-4" role="navigation">
+    <div class="nav-wrapper container">
+      <img src="https://www.hoenl.de/guckloch/archiv/2002_2/Image1.gif" height=60px width=60px  class="responsive-img">
+      <a id="logo-container" routerLink=""  class="brand-logo">
+        Cine Angular
+      </a>
 
-<router-outlet></router-outlet>
+      <ul class="right hide-on-med-and-down">
+        <li><a routerLink="/inserir" routerLinkActive="selected">Inserir</a></li>
+        <li><a routerLink="/listar-filmes" routerLinkActive="selected">Listar Filmes</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+    <router-outlet></router-outlet>
+<br>
+  <footer class="page-footer orange accent-4">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col l6 s12">
+          <h4 class="white-text">
+            <img src="https://www.hoenl.de/guckloch/archiv/2002_2/Image1.gif" height=60px width=60px  class="responsive-img">
+            Cine Angular</h4>
+          <p class="grey-text text-lighten-4">Sistema elaborado durante a disciplina de Frameworks II
+            para avaliação da disciplina. O sistema de cinema foi desenvolvido utilizando as tecnologias de
+            Materialize, Spring e Angular 8</p>
+        </div>
+
+        <div class="col l3 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" routerLink="">Home</a></li>
+            <li><a class="white-text" routerLink="/listar-filmes">Filmes</a></li>
+            <li><a class="white-text" routerLink="/listar-clientes">Clientes</a></li>
+            <li><a class="white-text" routerLink="/inserir-clientes">Inserir Clientes</a></li>
+          </ul>
+        </div>
+
+        <div class="col l3 s12">
+          <ul>
+            <li><a class="white-text" routerLink="/listar-funcionarios">Funcionarios</a></li>
+            <li><a class="white-text" routerLink="/inserir-funcionario">Inserir Funcionarios</a></li>
+            <li><a class="white-text" routerLink="/listar-sessoes">Sessões</a></li>
+            <li><a class="white-text" routerLink="/inserir-sessao">Inserir Sessão</a></li>
+          </ul>
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="https://www.instagram.com/vini_chewbacca/">Vinícius Souza</a>
+      </div>
+    </div>
+  </footer>
+
+<!--  Scripts-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
