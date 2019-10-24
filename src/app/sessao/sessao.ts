@@ -6,5 +6,5 @@ export class Sessao {
    horario: string;
    sala: string;
    idFilme: Filme = new Filme();
-   idCliente: Cliente = new Cliente();
+   idPessoa: Cliente = new Cliente();
 }
