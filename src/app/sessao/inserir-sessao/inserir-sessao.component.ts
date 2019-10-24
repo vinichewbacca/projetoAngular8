@@ -18,10 +18,10 @@ export class InserirSessaoComponent implements OnInit {
   ngOnInit() {
   }
 
-  /*novaSessao(): void {
+  novaSessao(): void {
     this.submitted = false;
     this.sessao = new Sessao();
-  }*/
+  }
 
   rotaSessoes() {
     this.rota.navigate(['/listar-sessoes']);
