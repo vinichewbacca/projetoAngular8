@@ -13,6 +13,7 @@ import {InserirFuncionarioComponent} from './funcionario/inserir-funcionario/ins
 import {ListarSessaoComponent} from './sessao/listar-sessao/listar-sessao.component';
 import {UpdateSessaoComponent} from './sessao/update-sessao/update-sessao.component';
 import {InserirSessaoComponent} from './sessao/inserir-sessao/inserir-sessao.component';
+import {LoginComponent} from './login/login.component';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'listar-filmes', component: ListarComponent},
   {path: 'listar-clientes', component: ListarClienteComponent},
   {path: 'listar-funcionarios', component: ListarFuncComponent},
-  {path: 'listar-sessoes', component: ListarSessaoComponent}
+  {path: 'listar-sessoes', component: ListarSessaoComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

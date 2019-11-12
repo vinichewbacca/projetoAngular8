@@ -20,6 +20,7 @@ import { InserirFuncionarioComponent } from './funcionario/inserir-funcionario/i
 import { ListarSessaoComponent } from './sessao/listar-sessao/listar-sessao.component';
 import { InserirSessaoComponent } from './sessao/inserir-sessao/inserir-sessao.component';
 import {UpdateSessaoComponent} from './sessao/update-sessao/update-sessao.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {UpdateSessaoComponent} from './sessao/update-sessao/update-sessao.compon
     InserirFuncionarioComponent,
     ListarSessaoComponent,
     InserirSessaoComponent,
-    UpdateSessaoComponent
+    UpdateSessaoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
